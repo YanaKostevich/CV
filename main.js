@@ -12,7 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
     header.querySelector('.head-name')
         .insertAdjacentHTML("afterbegin", `${data.name.firstName} ${data.name.lastName}`)
     header.querySelector('.g-info')
-        .insertAdjacentHTML('beforeend', `<h4>${data.position.map(item => `<span>${item}</span>`).join('•')}</h4>`);
+        .insertAdjacentHTML('beforeend', `<h4>${data.position.map(item => `<span>${item}</span>`).join(`<div class="circle"></div>
+        `)}</h4>`);
 
     /*Aside*/
     /*make header padding*/

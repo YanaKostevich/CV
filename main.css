@@ -32,6 +32,10 @@ body {
   transition: all 0.2s ease;
   grid-template: "header header header " "aside main main " "footer footer footer"/1fr 1fr 1fr;
 }
+h1, h2, h3, p {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 
 /*Paddings & container general*/
 header, footer, aside, main {
@@ -80,6 +84,13 @@ header section .g-info h4 {
   flex-flow: row wrap;
   column-gap: 0.62rem;
   color: #2196F3;
+  align-items: center;
+}
+header section .g-info h4 .circle{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #bbbbbb;
 }
 header section .g-info h4 span {
   width: max-content;
@@ -87,6 +98,7 @@ header section .g-info h4 span {
   font-weight: 400;
   text-transform: capitalize;
   word-break: unset;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 aside {
@@ -164,6 +176,12 @@ aside section .main-info .info .contact-items a {
   align-items: center;
   text-decoration: none;
   justify-content: center;
+  transition: transform 0.5s ease;
+}
+aside section .main-info .info .contact-items a:hover{
+  transition: transform 0.5s ease;
+  color: #bbbbbb;
+  transform: scale(1.1);
 }
 aside section .skill-section .skill-tags,
 aside section .skill-section .lang-tags,
@@ -402,6 +420,12 @@ footer section .socials a {
   align-items: center;
   text-decoration: none;
   justify-content: center;
+  transition: transform 0.5s ease;
+}
+footer section .socials a:hover{
+  transition: transform 0.5s ease;
+  color: #bbbbbb;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=main.css.map */
