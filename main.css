@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --global-padding: calc(100vw * 0.05);
+  --main-bg: rgba(0, 0, 0, .62);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scrollbar-width: thin;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--main-bg);
+  border-radius: 0.5vw;
+}
+html::-webkit-scrollbar-track {
+  background-color: var(--main-bg);
+}
+
+/*separate styles*/
+body {
+  background: center center/cover no-repeat fixed url("https://images.unsplash.com/photo-1595355308161-4ab4c6a2b4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+  display: grid;
+  transition: all 0.2s ease;
+  grid-template: "header header header " "aside main main " "footer footer footer"/1fr 1fr 1fr;
+}
+
+/*Paddings & container general*/
+header, footer, aside, main {
+  padding: 0 var(--global-padding);
+  background: var(--main-bg);
+  backdrop-filter: blur(1rem) saturate(150%);
+}
+header section, footer section, aside section, main section {
+  padding: 2rem 0;
+  display: flex;
+  width: 100%;
+}
+
+/*Additional styles*/
+header {
+  z-index: 10;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  position: fixed;
+  grid-area: header;
+  align-items: stretch;
+  justify-content: center;
+  box-shadow: 0 0.25rem 1rem hsla(240deg, 100%, 1%, 0.1);
+  background: rgba(0, 0, 0, 0.75);
+}
+header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+}
+header section h1 {
+  color: #fafafa;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 400;
+}
+header section .g-info {
+  display: flex;
+  row-gap: 0.5rem;
+  flex-flow: column;
+}
+header section .g-info h4 {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 0.62rem;
+  color: #2196F3;
+}
+header section .g-info h4 span {
+  width: max-content;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  font-weight: 400;
+  text-transform: capitalize;
+  word-break: unset;
+}
+
+aside {
+  z-index: 1;
+  display: flex;
+  grid-area: aside;
+  position: relative;
+  box-shadow: inset 0 -0.25rem 0.5rem hsla(0deg, 0%, 0%, 0.2);
+}
+aside section {
+  top: 4rem;
+  row-gap: 1rem;
+  position: sticky;
+  height: max-content;
+  flex-flow: column nowrap;
+  /**/
+  /**/
+  /**/
+  /**/
+}
+aside section .skill-section h3,
+aside section .lang_section h3,
+aside section .interests-section h3 {
+  display: flex;
+  padding: 0 0 0 0;
+  text-transform: uppercase;
+  color: #aaa;
+}
+aside section .main-info {
+  width: 100%;
+  display: inherit;
+  column-gap: 1rem;
+  height: fit-content;
+  padding-bottom: 1.5rem;
+}
+aside section .main-info .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  /* width: clamp(10rem, 100%, 15rem);
+  height: clamp(10rem, 100%, 15rem); */
+  display: flex;
+  min-width: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+aside section .main-info .photo img {
+  display: flex;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 0.25rem 1rem rgba(0, 0, 0, 0.15));
+}
+aside section .main-info .info {
+  flex-grow: 1;
+  display: flex;
+  row-gap: 0.5rem;
+  max-width: 100%;
+  flex-flow: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+aside section .main-info .info .contact-items {
+  gap: 1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+aside section .main-info .info .contact-items a {
+  display: flex;
+  color: #fafafa;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+}
+aside section .skill-section .skill-tags,
+aside section .skill-section .lang-tags,
+aside section .lang_section .skill-tags,
+aside section .lang_section .lang-tags {
+  gap: 0.5rem;
+  display: flex;
+  padding: 1rem 0;
+  flex-flow: row wrap;
+}
+aside section .skill-section .skill-tags .skill-item,
+aside section .skill-section .skill-tags .lang-item,
+aside section .skill-section .lang-tags .skill-item,
+aside section .skill-section .lang-tags .lang-item,
+aside section .lang_section .skill-tags .skill-item,
+aside section .lang_section .skill-tags .lang-item,
+aside section .lang_section .lang-tags .skill-item,
+aside section .lang_section .lang-tags .lang-item {
+  color: #f1f1f1;
+  display: flex;
+  line-height: 1;
+  font-size: 0.9rem;
+  column-gap: 0.3rem;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.35rem 0.7rem;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #bbb;
+  border-right-color: #bbb;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  font-weight: 200;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+aside section .skill-section .skill-tags .skill-item s,
+aside section .skill-section .skill-tags .lang-item s,
+aside section .skill-section .lang-tags .skill-item s,
+aside section .skill-section .lang-tags .lang-item s,
+aside section .lang_section .skill-tags .skill-item s,
+aside section .lang_section .skill-tags .lang-item s,
+aside section .lang_section .lang-tags .skill-item s,
+aside section .lang_section .lang-tags .lang-item s {
+  color: #424242;
+  display: inherit;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: 0.1rem 0.25rem;
+  text-decoration: none;
+  justify-content: center;
+}
+aside section .skill-section .skill-tags .skill-item s:after,
+aside section .skill-section .skill-tags .lang-item s:after,
+aside section .skill-section .lang-tags .skill-item s:after,
+aside section .skill-section .lang-tags .lang-item s:after,
+aside section .lang_section .skill-tags .skill-item s:after,
+aside section .lang_section .skill-tags .lang-item s:after,
+aside section .lang_section .lang-tags .skill-item s:after,
+aside section .lang_section .lang-tags .lang-item s:after {
+  content: "y";
+}
+aside section .skill-section .skill-tags .skill-item:hover,
+aside section .skill-section .skill-tags .lang-item:hover,
+aside section .skill-section .lang-tags .skill-item:hover,
+aside section .skill-section .lang-tags .lang-item:hover,
+aside section .lang_section .skill-tags .skill-item:hover,
+aside section .lang_section .skill-tags .lang-item:hover,
+aside section .lang_section .lang-tags .skill-item:hover,
+aside section .lang_section .lang-tags .lang-item:hover {
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.08);
+}
+aside section .skill-section .skill-tags .skill-item:hover s,
+aside section .skill-section .skill-tags .lang-item:hover s,
+aside section .skill-section .lang-tags .skill-item:hover s,
+aside section .skill-section .lang-tags .lang-item:hover s,
+aside section .lang_section .skill-tags .skill-item:hover s,
+aside section .lang_section .skill-tags .lang-item:hover s,
+aside section .lang_section .lang-tags .skill-item:hover s,
+aside section .lang_section .lang-tags .lang-item:hover s {
+  color: #aaa;
+}
+aside section .skill-section .skill-tags .lang-item s,
+aside section .skill-section .lang-tags .lang-item s,
+aside section .lang_section .skill-tags .lang-item s,
+aside section .lang_section .lang-tags .lang-item s {
+  line-height: 1;
+}
+aside section .skill-section .skill-tags .lang-item s:after,
+aside section .skill-section .lang-tags .lang-item s:after,
+aside section .lang_section .skill-tags .lang-item s:after,
+aside section .lang_section .lang-tags .lang-item s:after {
+  content: "";
+}
+aside section .interests-section .hobby-tags {
+  gap: 0.5rem;
+  display: flex;
+  padding: 1rem 0;
+  flex-flow: row wrap;
+}
+aside section .interests-section .hobby-tags .hobby-item {
+  color: #f1f1f1;
+  display: flex;
+  line-height: 1;
+  font-size: 0.9rem;
+  column-gap: 0.3rem;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 0.4rem 0.7rem;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #bbb;
+  border-right-color: #bbb;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 200;
+}
+aside section .interests-section .hobby-tags .hobby-item:hover {
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.08);
+}
+
+main {
+  grid-area: main;
+  backdrop-filter: blur(3rem) saturate(150%);
+  background: rgba(0, 0, 0, 0.8);
+}
+main section {
+  flex-flow: column nowrap;
+}
+main section .myStory,
+main section .experience,
+main section .education {
+  color: #f1f1f1;
+  padding: 0 0 1.5rem 0;
+}
+main section .myStory h2,
+main section .experience h2,
+main section .education h2 {
+  color: #bbbbbb;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+main section .myStory h4,
+main section .experience h4,
+main section .education h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.5;
+}
+main section .myStory h4 span,
+main section .experience h4 span,
+main section .education h4 span {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  line-height: 1.2;
+  min-width: max-content;
+}
+main section .myStory h5,
+main section .experience h5,
+main section .education h5 {
+  font-style: oblique;
+  padding: 0.3rem 0;
+  color: #B0BEC5;
+}
+main section .myStory p,
+main section .experience p,
+main section .education p {
+  line-height: 1.5;
+  color: #90A4AE;
+}
+main section .experience p {
+  padding: 0.2rem 0 1rem 0;
+  font-size: 0.9rem;
+}
+main section .education {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+main section .education h3 {
+  color: #B0BEC5;
+}
+main section .education .eduItem {
+  color: #f1f1f1;
+}
+main section .education .eduItem h5 {
+  font-weight: normal;
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-style: normal;
+}
+main section .education .eduItem h5 span {
+  font-weight: bold;
+}
+main section .education .eduItem h5 hr {
+  height: 1rem;
+  border: none;
+  background: #ccc;
+  width: 1px;
+}
+
+footer {
+  grid-area: footer;
+  background: rgba(0, 0, 0, 0.9);
+}
+footer section {
+  color: #fff;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer section .socials {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+footer section .socials a {
+  display: flex;
+  color: #fff;
+  font-size: 1.5rem;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=main.css.map */
