@@ -79,6 +79,7 @@ header section .g-info {
   row-gap: 0.5rem;
   flex-flow: column;
 }
+
 header section .g-info h4 {
   display: flex;
   flex-flow: row wrap;

@@ -7,6 +7,7 @@ const data = {
         firstName: 'yana',
         lastName: 'kostevych',
     },
+    
     about: [
         // `So, a little about me. <br>`,
         `A motivated, determined, quick learner with strong interpersonal skils.`,
