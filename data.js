@@ -162,7 +162,7 @@ const data = {
         },
         {
             period: ['October 2022', 'May 2023'],
-            workNow: false,
+            workNow: true,
             companyName: `Self-employment`,
             position: `WordPress Developer`,
             description: `
