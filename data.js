@@ -10,9 +10,9 @@ const data = {
     
     about: [
         // `So, a little about me. <br>`,
-        `A motivated, determined, quick learner with strong interpersonal skils.`,
-        `I have over 2 years of experience in web development, so I'm ready to provide developer services in almost any direction.`,
-        `The main motivator for me is professional growth. Open for new opportunities to join a good team where I will evolve as a professional.`,
+        `I am a motivated, determined, quick learner with strong interpersonal skills.`,
+        `I have been developing websites for more than two years, thus I am ready to provide developer services in almost any direction.`,
+        `My biggest motivation is professional growth, that is why I am always open to new chances to join a solid team where I may grow as a professional.`,
         
     ],
     phone: [
@@ -196,7 +196,7 @@ const data = {
     ],
 
     makeMyStory() {
-        return this.about ? `<h2>So, a little about me</h2> <p>${this.about.map(item => `${item} `).join(' ')}</p>` : '';
+        return this.about ? `<h2>A few words about me</h2> <p>${this.about.map(item => `${item} `).join(' ')}</p>` : '';
     },
     makeContacts() {
         return this.messengers.map
