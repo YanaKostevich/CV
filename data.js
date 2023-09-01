@@ -1,6 +1,6 @@
 const currentDate = new Date()
 const data = {
-    age: '33',
+    age: '22',
     photoPath: 'img/my-photo.jpg',
     gender: 'female',
     name: {
