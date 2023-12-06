@@ -145,21 +145,21 @@ const data = {
         },
     ],
     experience: [
-        {
-            period: ['May 2023', ''],
-            workNow: true,
-            companyName: `Remote Helpers, Kharkiv (IT)`,
-            position: `Front-end | WordPress Developer`,
-            description: `
-            - Development of landing pages, online stores, and multi-page websites<br>
-            - Bug fixing and troubleshooting<br>
-            - WordPress development and customization<br>
-            - WooCommerce development and customization<br>
-            - Working with custom WordPress themes<br>
-            - Creating themes from scratch<br>
-            - Working with plugins like ACF, Contact Form 7, Polylang, WPML, Elementor, Elementor Pro<br>
-            - Working with various WordPress plugins and creating custom solutions for WooCommerce.`,
-        },
+        // {
+        //     period: ['May 2023', ''],
+        //     workNow: true,
+        //     companyName: `Remote Helpers, Kharkiv (IT)`,
+        //     position: `Front-end | WordPress Developer`,
+        //     description: `
+        //     - Development of landing pages, online stores, and multi-page websites<br>
+        //     - Bug fixing and troubleshooting<br>
+        //     - WordPress development and customization<br>
+        //     - WooCommerce development and customization<br>
+        //     - Working with custom WordPress themes<br>
+        //     - Creating themes from scratch<br>
+        //     - Working with plugins like ACF, Contact Form 7, Polylang, WPML, Elementor, Elementor Pro<br>
+        //     - Working with various WordPress plugins and creating custom solutions for WooCommerce.`,
+        // },
         {
             period: ['October 2022', 'May 2023'],
             workNow: true,
