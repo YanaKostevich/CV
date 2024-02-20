@@ -379,7 +379,8 @@ main section .education h3 {
 main section .education .eduItem {
   color: #f1f1f1;
 }
-main section .education .eduItem h5 {
+main section .education .eduItem h5,
+main section .education .eduItem a  {
   font-weight: normal;
   padding: 0.8rem 0;
   display: flex;
@@ -387,8 +388,18 @@ main section .education .eduItem h5 {
   gap: 0.5rem;
   font-style: normal;
 }
-main section .education .eduItem h5 span {
+main section .education .eduItem a{
+  color: #B0BEC5;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+main section .education .eduItem a:hover {
+  color: #f1f1f1;
+}
+main section .education .eduItem h5 span,
+main section .education .eduItem a {
   font-weight: bold;
+  padding: 0;
 }
 main section .education .eduItem h5 hr {
   height: 1rem;
